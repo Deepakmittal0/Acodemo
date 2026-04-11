@@ -1,0 +1,148 @@
+.blog-page {
+  padding-top: 80px;
+  background: #f8fafc;
+}
+
+/* HERO */
+.blog-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.blog-hero h1 {
+  font-size: 2.5rem;
+}
+
+.blog-hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* GRID */
+.blog-container {
+  padding: 40px 0;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.blog-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.blog-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+}
+
+.blog-content p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* META */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.read-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.read-btn:hover {
+  background: #1e40af;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .blog-hero h1 {
+    font-size: 2rem;
+  }
+}
+
+/* MODAL SAME AS SERVICES */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

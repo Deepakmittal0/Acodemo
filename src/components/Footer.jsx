@@ -12,7 +12,7 @@ const Footer = () => {
             <span className="text-surface">Acad</span><span className="text-accent">omo</span>
           </Link>
           <p className="text-muted mb-3">
-            Your global gateway to premium student accommodations and elite university admissions. Experience luxury, trust, and connectivity.
+            Your global gateway to premium student accommodations. Experience luxury, trust, and comfortable living.
           </p>
           <div className="social-links">
             <a href="#"><FaFacebookF size={20} /></a>
@@ -26,8 +26,7 @@ const Footer = () => {
           <h4 className="footer-heading mb-2">Quick Links</h4>
           <ul className="footer-links">
             <li><Link to="/accommodations">Accommodations</Link></li>
-            <li><Link to="/universities">Universities</Link></li>
-            <li><Link to="/services">Our Services</Link></li>
+            <li><Link to="/services">Accommodation Services</Link></li>
             <li><Link to="/blog">Blog & News</Link></li>
           </ul>
         </div>

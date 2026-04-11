@@ -1,0 +1,183 @@
+/* BACKGROUND */
+.contact-page {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  padding: 100px 20px;
+  color: white;
+}
+
+/* CONTAINER */
+.contact-container {
+  max-width: 900px; /* 🔥 tighter = premium */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* HEADER */
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.contact-header span {
+  color: #22c55e;
+}
+
+/* BADGE */
+.badge {
+  background: #22c55e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* CARDS */
+.contact-card {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* WHY CARD SPECIAL */
+.why-card {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+}
+
+.why-card ul {
+  margin-top: 10px;
+}
+
+.why-card li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* FORM */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-card input,
+.contact-card select,
+.contact-card textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+/* INPUT FOCUS */
+.contact-card input:focus,
+.contact-card select:focus,
+.contact-card textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* BUTTON */
+.primary-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* BUTTON HOVER */
+.primary-btn:hover {
+  transform: scale(1.03);
+  background: #1e40af;
+}
+
+/* ACTION BUTTONS */
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.call-btn,
+.whatsapp-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+/* CALL */
+.call-btn {
+  background: #2563eb;
+}
+
+.call-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  background: #16a34a;
+}
+
+.whatsapp-btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* MAP */
+iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+}

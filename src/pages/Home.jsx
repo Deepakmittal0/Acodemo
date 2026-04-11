@@ -31,15 +31,15 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1>Premium Student Living,<br/>Global Admissions.</h1>
+            <h1>Premium Student Living,<br/>Global Accommodations.</h1>
             <p className="text-muted mt-2 mb-4">
-              Discover unparalleled student accommodations and elite university admissions assistance in top cities worldwide.
+              Discover unparalleled student accommodations and exceptional housing assistance in top cities worldwide.
             </p>
             
             <div className="search-bar glass">
               <div className="search-input">
                 <MapPin className="text-accent" size={20} />
-                <input type="text" placeholder="Search by city or university..." />
+                <input type="text" placeholder="Search by city, area or property..." />
               </div>
               <button className="btn btn-primary">
                 <Search size={18} /> Search
@@ -128,8 +128,8 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>Ready to start your journey?</h2>
-            <p className="mb-3">Get expert admissions consulting and priority accommodation access.</p>
-            <Link to="/contact" className="btn btn-accent">Speak to an Advisor</Link>
+            <p className="mb-3">Get expert housing consultation and priority accommodation access.</p>
+            <Link to="/contact" className="btn btn-accent">Speak to a Housing Expert</Link>
           </motion.div>
         </div>
       </section>

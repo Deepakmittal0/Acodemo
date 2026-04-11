@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Building, Navigation, GraduationCap, Phone } from 'lucide-react';
+import { Menu, X, Globe, Building, Navigation, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -19,7 +19,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/', icon: <Globe size={20} /> },
     { name: 'Accommodations', path: '/accommodations', icon: <Building size={20} /> },
-    { name: 'Universities', path: '/universities', icon: <GraduationCap size={20} /> },
     { name: 'Services', path: '/services', icon: <Navigation size={20} /> },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact', icon: <Phone size={20} /> },
@@ -27,9 +26,15 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="container nav-container">
-        <Link to="/" className="nav-logo">
-          <span className="text-primary">Acad</span><span className="text-accent">omo</span>
+      <div className="container nav-container flex items-center justify-between">
+
+        {/* ✅ LOGO FIXED */}
+        <Link to="/" className="nav-logo flex items-center">
+          <img 
+            src="/logo.png" 
+            alt="Acadomo Logo" 
+            className="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -43,7 +48,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link to="/contact" className="btn btn-primary ml-2">Book Now</Link>
+          <Link to="/contact" className="btn btn-primary ml-2">Find Housing</Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -52,7 +57,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu glass">
           {navLinks.map((link) => (
@@ -66,8 +71,12 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link to="/contact" className="btn btn-primary w-100 mt-2" onClick={() => setIsOpen(false)}>
-            Book Now
+          <Link 
+            to="/contact" 
+            className="btn btn-primary w-100 mt-2" 
+            onClick={() => setIsOpen(false)}
+          >
+            Find Housing
           </Link>
         </div>
       )}

@@ -30,7 +30,7 @@ const Accommodations = () => {
             <div className="filter-bar glass">
               <div className="filter-group">
                 <Search size={18} className="text-muted" />
-                <input type="text" placeholder="Search city or university" />
+                <input type="text" placeholder="Search city, area or property" />
               </div>
               <div className="filter-group hide-mobile">
                 <select>
