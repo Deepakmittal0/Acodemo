@@ -10,6 +10,7 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import PageTransition from './components/PageTransition';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingChat from './components/FloatingChat';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ function App() {
         <AnimatedRoutes />
       </main>
       <Footer />
+      <FloatingChat />
     </Router>
   );
 }
