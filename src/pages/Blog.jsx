@@ -59,7 +59,6 @@ const Blog = () => {
   return (
     <section className="blog-page">
 
-      {/* HERO */}
       <div className="blog-hero">
         <motion.div initial="hidden" animate="show" variants={fadeUp}>
           <h1>Student Accommodation Blog</h1>
@@ -67,7 +66,6 @@ const Blog = () => {
         </motion.div>
       </div>
 
-      {/* GRID */}
       <div className="container blog-container">
         <div className="blog-grid">
           {blogs.map((blog, index) => (
@@ -93,7 +91,6 @@ const Blog = () => {
                   <span><Star size={14}/> Featured</span>
                 </div>
 
-                {/* 🔥 BUTTON */}
                 <button
                   className="read-btn"
                   onClick={() => setSelectedBlog(blog)}
@@ -106,7 +103,6 @@ const Blog = () => {
         </div>
       </div>
 
-      {/* 🔥 POPUP */}
       {selectedBlog && (
         <div className="modal-overlay" onClick={() => setSelectedBlog(null)}>
           <div className="modal-box" onClick={(e) => e.stopPropagation()}>

@@ -7,7 +7,7 @@ const FloatingChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Only render on the home page ('/')
+  
   if (location.pathname !== '/') {
     return null;
   }
@@ -35,14 +35,14 @@ const FloatingChat = () => {
       id: 3,
       title: "WhatsApp Chat",
       icon: <FaComments />,
-      link: "https://wa.me/1234567890", // Replace with real number
+      link: "https://wa.me/1234567890", 
       isExternal: true
     },
     {
       id: 4,
       title: "Talk to a Human",
       icon: <FaUserTie />,
-      link: "tel:+1234567890", // Replace with real number
+      link: "tel:+1234567890", 
       isExternal: true
     }
   ];
@@ -74,7 +74,7 @@ const FloatingChat = () => {
         </ul>
       </div>
 
-      {/* Toggle Button */}
+      
       <button 
         className={`acadomo-floating-widget-btn ${isOpen ? 'open' : ''}`} 
         onClick={toggleMenu}

@@ -42,12 +42,11 @@ const WhatsAppButton = () => {
         `}
       </style>
       <div className="fixed bottom-6 right-6 z-[9999] flex items-center wa-btn-container">
-        {/* Tooltip */}
+        
         <div className="wa-tooltip mr-3 bg-white text-gray-800 text-sm font-medium py-1.5 px-3 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-gray-100 whitespace-nowrap">
           Chat with us
         </div>
         
-        {/* Button */}
         <a
           href="https://wa.me/919876543210"
           target="_blank"

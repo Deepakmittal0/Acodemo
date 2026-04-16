@@ -6,7 +6,7 @@ import './PropertyDetails.css';
 const PropertyDetails = () => {
   const { id } = useParams();
   
-  // Dummy data
+  
   const property = {
     id,
     name: 'The Hive - London',
@@ -26,14 +26,13 @@ const PropertyDetails = () => {
 
   return (
     <div className="property-details-page pt-nav">
-      {/* Back Link */}
+  
       <div className="container pt-3">
         <Link to="/accommodations" className="text-muted flex mb-4" style={{ alignItems: 'center' }}>
           <ChevronLeft size={18} /> Back to Accommodations
         </Link>
       </div>
 
-      {/* Image Gallery */}
       <section className="container mb-4">
         <div className="gallery-grid">
           <motion.div 
@@ -66,7 +65,6 @@ const PropertyDetails = () => {
         </div>
       </section>
 
-      {/* Property Information */}
       <section className="container section-padding pb-4">
         <div className="grid details-grid">
           <div className="main-info">

@@ -28,7 +28,6 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container nav-container flex items-center justify-between">
 
-        {/* ✅ LOGO FIXED */}
         <Link to="/" className="nav-logo flex items-center">
           <img 
             src="/logo.png" 
@@ -37,7 +36,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Menu */}
         <div className="nav-links">
           {navLinks.map((link) => (
             <Link 
@@ -51,13 +49,11 @@ const Navbar = () => {
           <Link to="/contact" className="btn btn-primary ml-2">Find Housing</Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu glass">
           {navLinks.map((link) => (

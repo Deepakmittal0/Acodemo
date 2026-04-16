@@ -3,7 +3,6 @@
   background: #f8fafc;
 }
 
-/* HERO */
 .blog-hero {
   text-align: center;
   padding: 60px 20px;
@@ -20,7 +19,6 @@
   opacity: 0.9;
 }
 
-/* GRID */
 .blog-container {
   padding: 40px 0;
 }
@@ -31,7 +29,6 @@
   gap: 25px;
 }
 
-/* CARD */
 .blog-card {
   background: white;
   border-radius: 14px;
@@ -44,7 +41,6 @@
   transform: translateY(-8px);
 }
 
-/* IMAGE */
 .blog-img {
   height: 200px;
   overflow: hidden;
@@ -56,7 +52,6 @@
   object-fit: cover;
 }
 
-/* CONTENT */
 .blog-content {
   padding: 20px;
 }
@@ -71,7 +66,6 @@
   color: #555;
 }
 
-/* META */
 .blog-meta {
   display: flex;
   justify-content: space-between;
@@ -80,7 +74,6 @@
   margin-bottom: 10px;
 }
 
-/* BUTTON */
 .read-btn {
   background: #2563eb;
   color: white;
@@ -94,14 +87,12 @@
   background: #1e40af;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .blog-hero h1 {
     font-size: 2rem;
   }
 }
 
-/* MODAL SAME AS SERVICES */
 .modal-overlay {
   position: fixed;
   top: 0;

@@ -76,7 +76,6 @@
   padding: 1rem 2rem;
 }
 
-/* Trust Section */
 .bg-surface {
   background-color: var(--color-surface);
 }
@@ -104,7 +103,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Property Cards */
 .property-card {
   display: flex;
   flex-direction: column;
@@ -153,7 +151,6 @@
   font-size: 1.25rem;
 }
 
-/* CTA Section */
 .cta-section {
   background: var(--color-primary);
   position: relative;
@@ -197,7 +194,6 @@
   .hero-sublinks { justify-content: center; }
 }
 
-/* ── Hero Sub-links ── */
 .hero-sublinks {
   display: flex;
   flex-wrap: wrap;
@@ -231,7 +227,6 @@
   transform: translateY(-2px);
 }
 
-/* ── Final CTA Dual Buttons ── */
 .cta-final-actions {
   display: flex;
   justify-content: center;

@@ -43,10 +43,10 @@ const FAQItem = ({ q, a }) => {
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Main Footer Grid */}
+      
       <div className="footer-main section-padding">
         <div className="container grid grid-4 footer-grid">
-          {/* Brand */}
+        
           <div className="footer-col brand-col">
             <Link to="/" className="nav-logo footer-logo mb-2" style={{ display: 'block' }}>
               <span className="text-surface">Acad</span><span className="text-accent">omo</span>
@@ -61,13 +61,12 @@ const Footer = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn size={18} /></a>
               <a href="https://youtube.com"  target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube size={18} /></a>
             </div>
-            {/* Trust Badge */}
+          
             <div className="footer-trust-badge mt-3">
               ⭐ 4.9/5 · Trusted by 500+ students
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="footer-col">
             <h4 className="footer-heading mb-2">Quick Links</h4>
             <ul className="footer-links">
@@ -79,7 +78,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
           <div className="footer-col">
             <h4 className="footer-heading mb-2">Support</h4>
             <ul className="footer-links">
@@ -95,7 +93,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div className="footer-col">
             <h4 className="footer-heading mb-2">Contact Info</h4>
             <ul className="footer-contact">
@@ -119,7 +116,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* FAQ Strip */}
       <div className="footer-faq-strip">
         <div className="container">
           <h4 className="footer-faq-title">Frequently Asked Questions</h4>
@@ -131,7 +127,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="container">
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Acadomo. All rights reserved. Built with ❤️ for students worldwide.</p>

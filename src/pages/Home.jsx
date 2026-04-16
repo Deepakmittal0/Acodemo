@@ -6,7 +6,6 @@ import "./Home.css";
 import WhatsAppButton from "../components/WhatsAppButton";
 import RequirementPopup from "./RequirementPopup";
 
-/* ── Lazy-load all new sections for performance ── */
 const PlatformIntro = lazy(
   () => import("../components/sections/PlatformIntro"),
 );
@@ -22,7 +21,6 @@ const CTABanner = lazy(() => import("../components/sections/CTABanner"));
 const Testimonials = lazy(() => import("../components/sections/Testimonials"));
 const BlogPreview = lazy(() => import("../components/sections/BlogPreview"));
 
-/* Reusable stat card to avoid inline repetition */
 const StatCard = ({ icon, stat, label, variants }) => (
   <motion.div variants={variants} className="trust-card">
     <div className="trust-icon" aria-hidden="true">
@@ -54,7 +52,6 @@ const fadeInUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-/* ── Section loading fallback ── */
 const SectionFallback = () => (
   <div
     style={{
@@ -73,7 +70,6 @@ const SectionFallback = () => (
 const Home = () => {
   return (
     <div className="home-page">
-      {/* ── 1. HERO ─────────────────────────────────── */}
       <section className="hero" aria-label="Hero section">
         <div className="hero-bg" aria-hidden="true" />
         <div className="container hero-content">
@@ -130,7 +126,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── 2. TRUST STATS ──────────────────────────── */}
       <section
         className="section-padding trust-section bg-surface"
         aria-label="Platform statistics"
@@ -150,47 +145,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── 3. PLATFORM INTRO ───────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <PlatformIntro />
       </Suspense>
 
-      {/* ── 4. POPULAR CITIES ───────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <PopularCities />
       </Suspense>
 
-      {/* ── 5. FEATURED PROPERTIES ──────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <FeaturedProperties />
       </Suspense>
 
-      {/* ── 6. WHY CHOOSE US ────────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <WhyChooseUs />
       </Suspense>
 
-      {/* ── 7. HOW IT WORKS ─────────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <HowItWorks />
       </Suspense>
 
-      {/* ── 8. MULTI-CTA BANNER ─────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <CTABanner />
       </Suspense>
 
-      {/* ── 9. TESTIMONIALS ─────────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <Testimonials />
       </Suspense>
 
-      {/* ── 10. BLOG PREVIEW ────────────────────────── */}
       <Suspense fallback={<SectionFallback />}>
         <BlogPreview />
       </Suspense>
 
-      {/* ── 11. FINAL CTA ───────────────────────────── */}
+    
       <section
         className="cta-section section-padding"
         aria-label="Final call to action"

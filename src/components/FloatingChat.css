@@ -6,10 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  pointer-events: none; /* Let clicks pass through wrapper */
+  pointer-events: none; 
 }
 
-/* Make sure child elements capture clicks */
+
 .acadomo-floating-widget-btn, .acadomo-floating-widget-menu {
   pointer-events: auto;
 }
@@ -18,7 +18,7 @@
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  background-color: #25D366; /* WhatsApp Green */
+  background-color: #25D366; 
   color: #ffffff;
   border: none;
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
@@ -26,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 38px; /* For the FaWhatsapp icon */
+  font-size: 38px; 
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 10000;
@@ -34,10 +34,10 @@
 }
 
 .acadomo-floating-widget-btn.open {
-  background-color: #0f172a; /* Navy blue close state */
+  background-color: #0f172a; 
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.3);
   transform: rotate(90deg);
-  font-size: 28px; /* for the FaTimes icon */
+  font-size: 28px; 
 }
 
 .acadomo-floating-widget-btn:hover {
@@ -56,7 +56,7 @@
 
 .acadomo-floating-widget-menu {
   position: absolute;
-  bottom: 85px; /* Above the button */
+  bottom: 85px; 
   right: 0;
   width: 310px;
   background-color: #ffffff;
@@ -78,7 +78,7 @@
 }
 
 .acadomo-floating-widget-header {
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* Navy blue header */
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #ffffff;
   padding: 22px 20px;
   text-align: left;
@@ -149,7 +149,6 @@
   color: #ffffff;
 }
 
-/* WhatsApp specific emphasis on icon */
 .acadomo-floating-widget-list li:nth-child(3) .acadomo-floating-widget-link:hover .acadomo-floating-widget-icon {
   background-color: #25D366;
   color: #ffffff;
@@ -161,7 +160,6 @@
   font-family: inherit;
 }
 
-/* Responsive constraints */
 @media (max-width: 480px) {
   .acadomo-floating-widget-wrapper {
     bottom: 20px;

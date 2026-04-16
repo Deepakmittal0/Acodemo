@@ -59,7 +59,6 @@ const Services = () => {
   return (
     <section className="services-page">
 
-      {/* HERO */}
       <div className="services-hero">
         <motion.div initial="hidden" animate="show" variants={fadeUp}>
           <h1>Premium Student Accommodation Services</h1>
@@ -67,7 +66,6 @@ const Services = () => {
         </motion.div>
       </div>
 
-      {/* SERVICES GRID */}
       <div className="container services-container">
         <div className="services-grid">
           {services.map((service, index) => (
@@ -91,7 +89,6 @@ const Services = () => {
                   <span>{service.icon} Accommodation</span>
                 </div>
 
-                {/* 🔥 BUTTON FIX */}
                 <button
                   className="service-btn"
                   onClick={() => setSelectedService(service)}
@@ -104,7 +101,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* 🔥 POPUP MODAL */}
+      
       {selectedService && (
         <div className="modal-overlay" onClick={() => setSelectedService(null)}>
           <div className="modal-box" onClick={(e) => e.stopPropagation()}>

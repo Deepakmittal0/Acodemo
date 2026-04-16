@@ -15,7 +15,7 @@ const Accommodations = () => {
 
   return (
     <div className="accommodations-page pt-nav">
-      {/* Header Section */}
+     
       <section className="bg-surface section-padding border-bottom">
         <div className="container">
           <motion.div 
@@ -26,7 +26,6 @@ const Accommodations = () => {
             <h1 className="mb-2">Premium Student Accommodations</h1>
             <p className="text-muted mb-4">Find your perfect luxury student living experience across global top tier cities.</p>
             
-            {/* Filter Bar */}
             <div className="filter-bar glass">
               <div className="filter-group">
                 <Search size={18} className="text-muted" />
@@ -54,7 +53,6 @@ const Accommodations = () => {
         </div>
       </section>
 
-      {/* Property Grid */}
       <section className="section-padding">
         <div className="container">
           <div className="grid grid-3">

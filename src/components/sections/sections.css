@@ -1,8 +1,4 @@
-/* ================================================
-   SHARED SECTIONS CSS - Acadomo Homepage Sections
-   ================================================ */
 
-/* ---- Section Badge ---- */
 .section-badge {
   display: inline-block;
   background: rgba(212, 175, 55, 0.12);
@@ -20,9 +16,6 @@
 .mt-3 { margin-top: var(--space-md); }
 .mt-4 { margin-top: var(--space-lg); }
 
-/* ================================================
-   VALUE PROPOSITION
-   ================================================ */
 .value-section {
   background: var(--color-background);
 }
@@ -84,9 +77,6 @@
   line-height: 1.7;
 }
 
-/* ================================================
-   POPULAR CITIES
-   ================================================ */
 .cities-section {
   background-color: var(--color-surface);
 }
@@ -159,9 +149,6 @@
   font-size: 0.8rem;
 }
 
-/* ================================================
-   FEATURED PROPERTIES
-   ================================================ */
 .featured-props-section {
   background: var(--color-background);
 }
@@ -285,9 +272,6 @@
   font-size: 0.8rem;
 }
 
-/* ================================================
-   WHY CHOOSE US
-   ================================================ */
 .why-section {
   background: var(--color-background);
 }
@@ -366,9 +350,6 @@
   line-height: 1.65;
 }
 
-/* ================================================
-   HOW IT WORKS
-   ================================================ */
 .how-section {
   background-color: var(--color-surface);
 }
@@ -449,9 +430,6 @@
   line-height: 1.7;
 }
 
-/* ================================================
-   TESTIMONIALS
-   ================================================ */
 .testimonials-section {
   background: var(--color-background);
 }
@@ -521,9 +499,6 @@
   gap: 2px;
 }
 
-/* ================================================
-   BLOG PREVIEW
-   ================================================ */
 .blog-section {
   background-color: var(--color-surface);
 }
@@ -617,9 +592,6 @@
   color: var(--color-primary);
 }
 
-/* ================================================
-   PLATFORM INTRO
-   ================================================ */
 .platform-intro-section {
   background: var(--color-surface);
 }
@@ -685,9 +657,6 @@
   line-height: 1.7;
 }
 
-/* ================================================
-   CTA BANNER
-   ================================================ */
 .cta-banner-section {
   background: var(--color-primary);
 }
@@ -785,9 +754,6 @@
   box-shadow: 0 8px 25px rgba(37,211,102,0.35);
 }
 
-/* ================================================
-   RESPONSIVE OVERRIDES
-   ================================================ */
 @media (max-width: 1024px) {
   .cities-grid           { grid-template-columns: repeat(2, 1fr); }
   .blog-grid             { grid-template-columns: repeat(2, 1fr); }

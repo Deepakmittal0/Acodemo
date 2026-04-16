@@ -52,7 +52,6 @@ const HowItWorks = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               viewport={{ once: true }}
             >
-              {/* Connector line (hidden on mobile) */}
               {i < steps.length - 1 && <div className="how-connector" aria-hidden="true" />}
 
               <div className="how-step-icon-wrap">

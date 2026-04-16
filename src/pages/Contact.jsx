@@ -24,7 +24,6 @@ const Contact = () => {
           <p>From Search to Stay — We’ve got you covered.</p>
         </motion.div>
 
-        {/* 🔥 WHY SECTION (TOP) */}
         <motion.div 
           className="contact-card why-card"
           initial="hidden"
@@ -40,7 +39,6 @@ const Contact = () => {
           </ul>
         </motion.div>
 
-        {/* 🔥 FORM */}
         <motion.div 
           className="contact-card"
           initial="hidden"
@@ -67,7 +65,6 @@ const Contact = () => {
             Get Free Consultation
           </button>
 
-          {/* ACTION BUTTONS */}
           <div className="contact-actions mt-3">
             <a href="tel:+919654598308" className="call-btn">
               <Phone size={18}/> Call Now
@@ -78,7 +75,6 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        {/* 🔥 MAP */}
         <motion.div 
           className="contact-card"
           initial="hidden"

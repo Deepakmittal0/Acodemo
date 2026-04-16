@@ -6,22 +6,21 @@ const RequirementPopup = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Popup appears after 1 second automatically on every page load
+
     const timer = setTimeout(() => {
       setOpen(true);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array ensures it runs exactly once per mount
+  }, []); 
 
   const handleClose = () => {
-    setOpen(false); // Only hides it for this current session (until reload)
+    setOpen(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Retrieve data
     const formData = new FormData(e.target);
     const data = {
       name: formData.get("name"),
@@ -31,7 +30,6 @@ const RequirementPopup = () => {
 
     console.log("Requirement Submitted:", data);
 
-    // Close popup
     handleClose();
   };
 
@@ -94,7 +92,6 @@ const RequirementPopup = () => {
   );
 };
 
-// Extracted styles to replace missing Tailwind classes
 const styles = {
   overlay: {
     position: "fixed",

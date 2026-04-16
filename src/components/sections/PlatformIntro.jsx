@@ -54,7 +54,6 @@ const PlatformIntro = () => {
             </Link>
           </motion.div>
 
-          {/* Right: Feature cards */}
           <motion.div
             className="platform-intro-right"
             initial={{ opacity: 0, x: 40 }}
