@@ -79,7 +79,8 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router>
+  
+  <><Router>
       <ScrollToTop />
       <Navbar />
       <main>
@@ -88,6 +89,11 @@ function App() {
       <Footer />
       <FloatingChat />
     </Router>
+ 
+      
+      {/* baaki components */}
+    </>
+    
   );
 }
 

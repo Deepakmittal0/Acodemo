@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Search, MapPin, Building, ShieldCheck, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import WhatsAppButton from "../components/WhatsAppButton";
+// import WhatsAppButton from "../components/WhatsAppButton";
 import RequirementPopup from "./RequirementPopup";
 
 const PlatformIntro = lazy(
@@ -33,7 +33,7 @@ const StatCard = ({ icon, stat, label, variants }) => (
 
 const STATS = [
   { icon: <Building size={32} />, stat: "10K+", label: "Premium Listings" },
-  { icon: <MapPin size={32} />, stat: "50+", label: "Global Cities" },
+  { icon: <MapPin size={32} />, stat: "500+", label: "Global Cities" },
   {
     icon: <ShieldCheck size={32} />,
     stat: "100%",
@@ -52,6 +52,31 @@ const fadeInUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+
+
+const countries = [
+  {
+    name: "United States",
+    img: "https://flagcdn.com/w320/us.png",
+  },
+  {
+    name: "Canada",
+    img: "https://flagcdn.com/w320/ca.png",
+  },
+  {
+    name: "United Kingdom",
+    img: "https://flagcdn.com/w320/gb.png",
+  },
+  {
+    name: "Australia",
+    img: "https://flagcdn.com/w320/au.png",
+  },
+  {
+    name: "Germany",
+    img: "https://flagcdn.com/w320/de.png",
+  },
+
+];
 const SectionFallback = () => (
   <div
     style={{
@@ -108,20 +133,16 @@ const Home = () => {
             </div>
 
             {/* Hero sub-links */}
-            <div className="hero-sublinks">
-              <Link to="/accommodations" className="hero-sublink">
-                London
-              </Link>
-              <Link to="/accommodations" className="hero-sublink">
-                Manchester
-              </Link>
-              <Link to="/accommodations" className="hero-sublink">
-                Edinburgh
-              </Link>
-              <Link to="/accommodations" className="hero-sublink">
-                Birmingham
-              </Link>
-            </div>
+<div className="hero-sublinks">
+
+  {countries.map((country, i) => (
+    <div key={i} className="country-card">
+      <img src={country.img} alt={country.name} />
+      <span>{country.name}</span>
+    </div>
+  ))}
+
+</div>
           </motion.div>
         </div>
       </section>
@@ -214,7 +235,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <RequirementPopup />
     </div>
   );

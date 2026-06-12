@@ -49,7 +49,7 @@ const Footer = () => {
         
           <div className="footer-col brand-col">
             <Link to="/" className="nav-logo footer-logo mb-2" style={{ display: 'block' }}>
-              <span className="text-surface">Acad</span><span className="text-accent">omo</span>
+              <span className="text-surface">Aca</span><span className="text-accent">domo</span>
             </Link>
             <p className="text-muted mb-3">
               Your global gateway to premium student accommodations. Experience luxury, trust, and comfortable living.
@@ -83,7 +83,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/contact">Talk to an Expert</Link></li>
               <li>
-                <a href="https://wa.me/441234567890" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/7302244122" target="_blank" rel="noopener noreferrer">
                   WhatsApp Chat
                 </a>
               </li>
@@ -98,11 +98,11 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>
                 <MapPin size={17} className="text-accent" />
-                <span>123 Global Campus Way, London, UK</span>
+                <span>Address-92/12 Sector A1-4, Narela, Delhi India</span>
               </li>
               <li>
                 <Phone size={17} className="text-accent" />
-                <a href="tel:+442079460958">+44 20 7946 0958</a>
+                <a href="tel:+442079460958">+917302244122</a>
               </li>
               <li>
                 <Mail size={17} className="text-accent" />

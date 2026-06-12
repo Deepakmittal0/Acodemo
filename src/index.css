@@ -2,14 +2,15 @@
 
 :root {
   /* Color Palette - Luxury Navy Blue & Gold */
-  --color-primary: #0A192F; /* Deep Navy Blue */
+  --color-primary: #01104B; /* Deep Navy Blue */
   --color-primary-light: #112240;
   --color-accent: #D4AF37; /* Elegant Gold */
   --color-accent-hover: #F3E5AB; /* Soft Gold */
   
   --color-background: #FAFAFB; /* Off White for soft contrast */
   --color-surface: #FFFFFF;
-  --color-text-main: #1A1A1A;
+  --color-text-main: #01104B;
+  /* --color-text-main: #1A1A1A; */
   --color-text-muted: #64748B;
   
   /* Typography */
@@ -21,7 +22,7 @@
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
-  --space-xl: 8rem;
+  --space-xl: 4rem;
 
   /* Layout */
   --max-width: 1200px;
@@ -145,7 +146,8 @@ img {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background-color: #01104B;
   color: white;
   box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
 }
@@ -218,7 +220,7 @@ img {
   padding: var(--space-xl) 0;
 }
 @media (max-width: 768px) {
-  .section-padding { padding: var(--space-lg) 0; }
+  .section-padding { padding: var(--space-sm) 0; }
 }
 
 /* Text Utilities */

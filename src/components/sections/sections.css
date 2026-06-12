@@ -788,3 +788,173 @@
   .value-grid { grid-template-columns: 1fr; }
   .city-img   { height: 220px; }
 }
+
+
+.country-section {
+  padding: 30px 0;
+  background: #0f0f1a;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.country-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.country-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.country-item {
+  padding: 10px 18px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.country-item:hover{
+  color: white;
+}
+.country-item.active {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-btn {
+  position: absolute;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  margin-left: -40px;
+}
+
+.left { left: 0; }
+.right { right: -30px; }
+
+/* SECTION */
+.cs-section {
+  padding: 40px 0;
+  background:#01104B;
+}
+
+/* HEADER */
+.cs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff !important;
+}
+
+.cs-header h3 {
+  font-weight: 700;
+}
+.cs-header h3{
+  color: white !important;
+}
+/* VIEW BUTTON */
+.cs-view-btn {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* WRAPPER */
+.cs-wrapper {
+  position: relative;
+}
+
+/* SLIDER */
+.cs-slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.cs-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.cs-card {
+  min-width: 140px;
+  background: #1c1c1c;
+  padding: 12px;
+  border-radius: 25px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* FLAG */
+.cs-card img {
+  width: 42px;
+  height: 26px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/* TEXT */
+.cs-card span {
+  font-size: 14px;
+}
+
+/* ACTIVE */
+.cs-card.active {
+  background: #e5c7a1;
+  color: #000;
+  font-weight: 600;
+}
+
+/* TOP COUNTRIES */
+.cs-card.top {
+  border: 2px solid #e5c7a1;
+}
+
+/* HOVER */
+.cs-card:hover {
+  transform: translateY(-4px);
+}
+
+/* NAV BUTTON */
+.cs-nav {
+  position: absolute;
+  top: 35%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cs-nav.left { left: -10px; }
+.cs-nav.right { right: -10px; }
+
+/* MOBILE */
+@media (max-width:768px) {
+  .cs-card {
+    min-width: 110px;
+  }
+}

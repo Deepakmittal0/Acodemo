@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, Building, Navigation, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import logo from "../assets/logo1.jpeg"
 import './Navbar.css';
 
 const Navbar = () => {
@@ -30,9 +31,9 @@ const Navbar = () => {
 
         <Link to="/" className="nav-logo flex items-center">
           <img 
-            src="/logo.png" 
+            src={logo} 
             alt="Acadomo Logo" 
-            className="h-10 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            className="h-12 md:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
           />
         </Link>
 

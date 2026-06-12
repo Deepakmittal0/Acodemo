@@ -7,11 +7,12 @@
   z-index: 1000;
   display: flex;
   align-items: center;
+  background-color: #01104B;
   transition: var(--transition-smooth);
 }
 
 .navbar-scrolled {
-  background: var(--glass-bg);
+  /* background: var(--glass-bg); */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--glass-shadow);
@@ -33,20 +34,22 @@
 }
 
 .nav-logo img {
-  max-height: 56px;
+  max-height: 68px;
   width: auto;
   object-fit: contain;
 }
 
 .nav-links {
   display: flex;
+  color: white;
   align-items: center;
   gap: 2rem;
 }
 
 .nav-link {
   font-weight: 500;
-  color: var(--color-text-main);
+  color: white !important;
+  /* color: var(--color-text-main); */
   position: relative;
 }
 

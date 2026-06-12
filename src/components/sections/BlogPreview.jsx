@@ -9,30 +9,56 @@ const posts = [
     title: '10 Things to Know Before Renting Student Accommodation in the UK',
     excerpt:
       'From tenancy agreements to utility bills — here\'s everything first-time renters in the UK need to know before signing a contract.',
-    category: 'Renting Tips',
+    category: 'UK Guide',
     readTime: '5 min read',
     img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 2,
-    title: 'Best Student Areas to Live in London in 2025',
+    title: 'Best Student Cities in the USA for Affordable Living',
     excerpt:
-      'We ranked London\'s most affordable and well-connected neighbourhoods for students based on transport, nightlife, and proximity to university.',
-    category: 'City Guides',
-    readTime: '7 min read',
-    img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80',
+      'Explore top US cities offering budget-friendly rent, strong universities, and vibrant student communities.',
+    category: 'USA Guide',
+    readTime: '6 min read',
+    img: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 3,
-    title: 'How to Budget for Student Living: A Complete 2025 Guide',
+    title: 'Living in Canada as a Student: Cost & Accommodation Guide',
     excerpt:
-      'Rent, groceries, transport, socialising — we break down average monthly costs for students in UK cities so you can plan smarter.',
-    category: 'Finance',
+      'From Toronto to Vancouver, here’s what students need to know about rent, transport, and student housing in Canada.',
+    category: 'Canada Guide',
+    readTime: '7 min read',
+    img: 'https://images.unsplash.com/photo-1505764706515-aa95265c5abc?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 4,
+    title: 'Top Student Areas in Sydney & Melbourne (Australia)',
+    excerpt:
+      'Find the best neighborhoods in Australia for students based on affordability, connectivity, and lifestyle.',
+    category: 'Australia',
+    readTime: '5 min read',
+    img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 5,
+    title: 'Student Housing in Germany: Everything You Need to Know',
+    excerpt:
+      'Germany offers affordable education — but what about housing? Here’s a complete guide for international students.',
+    category: 'Europe',
     readTime: '6 min read',
-    img: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    id: 6,
+    title: 'Singapore vs Malaysia: Where Should Students Live?',
+    excerpt:
+      'Compare cost of living, accommodation, and student lifestyle in two of Asia’s top education hubs.',
+    category: 'Asia',
+    readTime: '5 min read',
+    img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80',
   },
 ];
-
 const BlogPreview = () => {
   return (
     <section className="section-padding blog-section bg-surface">

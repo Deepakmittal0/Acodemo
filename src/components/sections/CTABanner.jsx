@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Search } from 'lucide-react';
 import './sections.css';
 
+
+
+
 const CTABanner = () => {
   return (
     <section className="cta-banner-section section-padding">
@@ -34,40 +37,46 @@ const CTABanner = () => {
                 near your university.
               </p>
             </motion.div>
+<motion.div
+  className="cta-banner-actions"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.35 }}
+  viewport={{ once: true }}
+>
 
-            <motion.div
-              className="cta-banner-actions"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.35 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                to="/accommodations"
-                className="btn btn-accent cta-btn-main"
-                id="cta-book-now"
-              >
-                <Search size={17} /> Book Now
-              </Link>
+  {/* ✅ BOOK NOW → POPUP OPEN */}
+  <Link
+  to="/contact"
+  className="btn btn-accent cta-btn-main"
+  id="cta-book-now"
+>
+  <Search size={17} /> Book Now
+</Link>
 
-              <Link
-                to="/contact"
-                className="btn cta-btn-ghost"
-                id="cta-free-consultation"
-              >
-                <Phone size={17} /> Get Free Consultation
-              </Link>
 
-              <a
-                href="https://wa.me/441234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn cta-btn-whatsapp"
-                id="cta-whatsapp"
-              >
-                <MessageCircle size={17} /> Join WhatsApp Community
-              </a>
-            </motion.div>
+  {/* ✅ CALL NOW */}
+  <a
+    href="tel:+917302244122"
+    className="btn cta-btn-ghost"
+    id="cta-free-consultation"
+  >
+    <Phone size={17} /> Get Free Consultation
+  </a>
+
+
+  {/* ✅ WHATSAPP COMMUNITY */}
+  <a
+    href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn cta-btn-whatsapp"
+    id="cta-whatsapp"
+  >
+    <MessageCircle size={17} /> Join WhatsApp Community
+  </a>
+
+</motion.div>
           </div>
         </motion.div>
       </div>

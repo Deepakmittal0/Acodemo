@@ -1,87 +1,89 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, Home as HomeIcon, Globe, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useRef, useState } from "react";
 import './sections.css';
 
-const steps = [
-  {
-    icon: <GraduationCap size={28} />,
-    title: 'Built for Students',
-    desc: 'Acadomo is designed exclusively for university students searching for accommodation near their campus — locally and internationally.',
-  },
-  {
-    icon: <HomeIcon size={28} />,
-    title: 'Verified Homes, Zero Stress',
-    desc: 'Every property is manually inspected. No scams, no surprises. Just safe, comfortable, and affordable places to live.',
-  },
-  {
-    icon: <Globe size={28} />,
-    title: 'Global Reach, Local Feel',
-    desc: 'From London to Edinburgh, we cover 50+ cities across the UK — and growing. Find your city, find your home.',
-  },
+
+const countries = [
+  { name: "United States", img: "https://flagcdn.com/w320/us.png" },
+  { name: "Canada", img: "https://flagcdn.com/w320/ca.png" },
+  { name: "United Kingdom", img: "https://flagcdn.com/w320/gb.png" },
+  { name: "Ireland", img: "https://flagcdn.com/w320/ie.png" },
+  { name: "Germany", img: "https://flagcdn.com/w320/de.png" },
+  { name: "France", img: "https://flagcdn.com/w320/fr.png" },
+
+  { name: "Netherlands", img: "https://flagcdn.com/w320/nl.png" },
+  { name: "Spain", img: "https://flagcdn.com/w320/es.png" },
+  { name: "Italy", img: "https://flagcdn.com/w320/it.png" },
+  { name: "China", img: "https://flagcdn.com/w320/cn.png" },
+  { name: "Hong Kong", img: "https://flagcdn.com/w320/hk.png" },
+  { name: "Singapore", img: "https://flagcdn.com/w320/sg.png" },
+  { name: "Malaysia", img: "https://flagcdn.com/w320/my.png" },
+  { name: "Japan", img: "https://flagcdn.com/w320/jp.png" },
+  { name: "South Korea", img: "https://flagcdn.com/w320/kr.png" },
+  { name: "Vietnam", img: "https://flagcdn.com/w320/vn.png" },
+  { name: "Australia", img: "https://flagcdn.com/w320/au.png" },
+  { name: "New Zealand", img: "https://flagcdn.com/w320/nz.png" },
+  { name: "Austria", img: "https://flagcdn.com/w320/at.png" },
+  { name: "Belgium", img: "https://flagcdn.com/w320/be.png" },
+  { name: "Denmark", img: "https://flagcdn.com/w320/dk.png" },
+  { name: "Finland", img: "https://flagcdn.com/w320/fi.png" },
+  { name: "Sweden", img: "https://flagcdn.com/w320/se.png" },
+  { name: "Switzerland", img: "https://flagcdn.com/w320/ch.png" },
+  { name: "Portugal", img: "https://flagcdn.com/w320/pt.png" },
+  { name: "Poland", img: "https://flagcdn.com/w320/pl.png" },
+  { name: "Thailand", img: "https://flagcdn.com/w320/th.png" },
+  { name: "United Arab Emirates", img: "https://flagcdn.com/w320/ae.png" },
+  { name: "Malta", img: "https://flagcdn.com/w320/mt.png" },
 ];
 
-const PlatformIntro = () => {
-  return (
-    <section className="section-padding platform-intro-section" aria-labelledby="platform-intro-heading">
-      <div className="container">
-        <div className="platform-intro-inner">
-          {/* Left: Text */}
-          <motion.div
-            className="platform-intro-left"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.65 }}
-            viewport={{ once: true }}
-          >
-            <span className="section-badge">How Acadomo Works</span>
-            <h2 id="platform-intro-heading" className="mt-2 mb-3">
-              The Smartest Way for <br />
-              <span className="text-accent">Students to Find a Home</span>
-            </h2>
-            <p className="text-muted platform-intro-desc">
-              Acadomo is a student accommodation platform that connects university students
-              with verified, affordable housing near their campus. Whether you are
-              relocating to a new city or looking for a better place to stay, we make
-              the process simple, safe, and fast.
-            </p>
-            <Link
-              to="/accommodations"
-              className="btn btn-primary mt-3"
-              id="platform-intro-cta"
-            >
-              Start Your Search <ArrowRight size={16} />
-            </Link>
-          </motion.div>
+export default function CountrySlider() {
+  const scrollRef = useRef();
+  const [active, setActive] = useState(0);
 
-          <motion.div
-            className="platform-intro-right"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.65 }}
-            viewport={{ once: true }}
-          >
-            {steps.map((step, i) => (
-              <motion.div
-                key={i}
-                className="platform-step glass-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.12 }}
-                viewport={{ once: true }}
-              >
-                <div className="platform-step-icon">{step.icon}</div>
-                <div>
-                  <h4 className="platform-step-title">{step.title}</h4>
-                  <p className="text-muted platform-step-desc">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+  const scroll = (dir) => {
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -400 : 400,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <section className="cs-section">
+      <div className="container">
+
+        {/* HEADER */}
+        <div className="cs-header">
+          <h3>Explore Countries</h3>
+          <button className="cs-view-btn">View All →</button>
         </div>
+
+        <div className="cs-wrapper">
+
+          <button className="cs-nav left" onClick={() => scroll("left")}>‹</button>
+
+          <div className="cs-slider" ref={scrollRef}>
+            {countries.map((c, i) => (
+              <div
+                key={i}
+                className={`cs-card 
+                  ${active === i ? "active" : ""} 
+                  ${i < 6 ? "top" : ""}`}
+                onClick={() => setActive(i)}
+              >
+                <img src={c.img} alt={c.name} />
+                <span>{c.name}</span>
+              </div>
+            ))}
+          </div>
+
+          <button className="cs-nav right" onClick={() => scroll("right")}>›</button>
+
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default PlatformIntro;
+}
+// export default CountrySlider;
