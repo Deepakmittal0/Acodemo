@@ -50,7 +50,7 @@ Email: ${form.email}
 Requirement: ${form.type}
 Message: ${form.message}`;
 
-    const url = `https://wa.me/917302244122?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/918796449760?text=${encodeURIComponent(msg)}`;
 
     window.open(url, "_blank");
   };
@@ -129,10 +129,10 @@ Message: ${form.message}`;
           </button>
 
           <div className="contact-actions mt-3">
-            <a href="tel:+917302244122" className="call-btn">
+            <a href="tel:+918796449760" className="call-btn">
               <Phone size={18}/> Call Now
             </a>
-            <a href="https://wa.me/7302244122" className="whatsapp-btn">
+            <a href="https://wa.me/8796449760" className="whatsapp-btn">
               <MessageCircle size={18}/> WhatsApp
             </a>
           </div>

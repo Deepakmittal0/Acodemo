@@ -17,7 +17,7 @@ const FloatingChat = () => {
   };
 
   // 🔥 YOUR NUMBER (yaha change karna)
-  const phoneNumber = "917302244122";
+  const phoneNumber = "918796449760";
 
   const menuItems = [
     {

@@ -83,7 +83,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><Link to="/contact">Talk to an Expert</Link></li>
               <li>
-                <a href="https://wa.me/7302244122" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/8796449760" target="_blank" rel="noopener noreferrer">
                   WhatsApp Chat
                 </a>
               </li>
@@ -102,11 +102,11 @@ const Footer = () => {
               </li>
               <li>
                 <Phone size={17} className="text-accent" />
-                <a href="tel:+442079460958">+917302244122</a>
+                <a href="tel:+442079460958">+918796449760</a>
               </li>
               <li>
                 <Mail size={17} className="text-accent" />
-                <a href="mailto:hello@acadomo.example.com">hello@acadomo.example.com</a>
+                <a href="mailto:info@acadomo.com">info@acadomo.com</a>
               </li>
             </ul>
             <Link to="/contact" className="btn btn-accent footer-cta-btn mt-3">

@@ -9,7 +9,7 @@ const RequirementPopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -22,7 +22,7 @@ const RequirementPopup = () => {
     }
 
     reopenTimer.current = setTimeout(() => {
-      setOpen(true);
+      setOpen(false);
     }, 15000);
   };
 
@@ -80,7 +80,7 @@ Name: ${data.name}
 Phone: ${data.phone}
 City: ${data.city}`;
 
-  const url = `https://wa.me/917302244122?text=${encodeURIComponent(msg)}`;
+  const url = `https://wa.me/918796449760?text=${encodeURIComponent(msg)}`;
 
   // ⏱️ thoda delay (alert dikhe fir open ho)
   setTimeout(() => {

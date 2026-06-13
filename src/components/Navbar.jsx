@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, Building, Navigation, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import logo from "../assets/logo1.jpeg"
+import logo from "../assets/logo1.png";
 import './Navbar.css';
 
 const Navbar = () => {

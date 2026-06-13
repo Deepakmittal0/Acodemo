@@ -57,7 +57,7 @@ const CTABanner = () => {
 
   {/* ✅ CALL NOW */}
   <a
-    href="tel:+917302244122"
+    href="tel:+918796449760"
     className="btn cta-btn-ghost"
     id="cta-free-consultation"
   >
