@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
-import Swal from "sweetalert2"; // ✅ add this
+import Swal from "sweetalert2";
 
 const RequirementPopup = () => {
   const [open, setOpen] = useState(false);
@@ -26,77 +26,102 @@ const RequirementPopup = () => {
     }, 15000);
   };
 
-  // ✅ UPDATED SUBMIT FUNCTION
-const handleSubmit = (e) => {
-  e.preventDefault();
+  // ✅ UPDATED SUBMIT FUNCTION WITH WEB3FORMS
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const formData = new FormData(e.target);
+    const formData = new FormData(e.target);
 
-  const data = {
-    name: formData.get("name"),
-    phone: formData.get("phone"),
-    city: formData.get("city"),
-  };
+    const data = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      city: formData.get("city"),
+      remark: formData.get("remark"),
+    };
 
-  console.log("Form Submitted:", data);
+    console.log("Form Submitted:", data);
 
-  // ❌ validation
-  if (!data.name || !data.phone || !data.city) {
+    // ❌ validation
+    if (!data.name || !data.phone || !data.city || !data.remark) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please fill all fields!",
+      });
+      return;
+    }
+
+    if (!/^[0-9]{10}$/.test(data.phone)) {
+      Swal.fire({
+        icon: "error",
+        title: "Invalid Number",
+        text: "Enter valid 10 digit phone number",
+      });
+      return;
+    }
+
+    // ✅ Send Email via Web3Forms
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "302edd1b-2152-4e17-b588-b73282a95a48", // 👈 Replace with your Web3Forms Access Key
+
+          subject: "New Requirement Lead",
+
+          name: data.name,
+          phone: data.phone,
+          city: data.city,
+          remark: data.remark,
+        }),
+      });
+
+      const result = await response.json();
+      console.log("Web3Forms Response:", result);
+    } catch (error) {
+      console.error("Mail Error:", error);
+    }
+
+    // ✅ popup band karo
+    setOpen(false);
+
+    // ✅ success alert
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Please fill all fields!",
+      icon: "success",
+      title: "Submitted Successfully 🎉",
+      text: "Redirecting to WhatsApp...",
+      timer: 5000,
+      showConfirmButton: false,
     });
-    return;
-  }
 
-  if (!/^[0-9]{10}$/.test(data.phone)) {
-    Swal.fire({
-      icon: "error",
-      title: "Invalid Number",
-      text: "Enter valid 10 digit phone number",
-    });
-    return;
-  }
-
-  // ✅ popup band karo (immediate)
-  setOpen(false);
-
-  // ✅ success alert
-  Swal.fire({
-    icon: "success",
-    title: "Submitted Successfully 🎉",
-    text: "Redirecting to WhatsApp...",
-    timer: 5000,
-    showConfirmButton: false,
-  });
-
-  // ✅ WhatsApp message
-  const msg = `Hello Acadomo,
+    // ✅ WhatsApp message
+    const msg = `Hello Acadomo,
 
 New Lead Details:
 
 Name: ${data.name}
 Phone: ${data.phone}
-City: ${data.city}`;
+City: ${data.city}
+Remark: ${data.remark}`;
 
-  const url = `https://wa.me/918796449760?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/918796449760?text=${encodeURIComponent(msg)}`;
 
-  // ⏱️ thoda delay (alert dikhe fir open ho)
-  setTimeout(() => {
-    window.open(url, "_blank");
-  }, 9000);
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 9000);
 
-  // reset form
-  e.target.reset();
-};
+    e.target.reset();
+  };
 
   if (!open) return null;
 
   return createPortal(
     <div style={styles.overlay}>
       <div style={styles.modal}>
-
         <button onClick={handleClose} style={styles.closeButton}>
           ✕
         </button>
@@ -109,22 +134,43 @@ City: ${data.city}`;
         </div>
 
         <form onSubmit={handleSubmit} style={styles.form}>
-          <input name="name" placeholder="Your Name" style={styles.input} required />
-          <input name="phone" placeholder="Phone Number" style={styles.input} required />
-          <input name="city" placeholder="Preferred City" style={styles.input} required />
-          <input name="remark" placeholder="Remark" style={styles.input} required />
+          <input
+            name="name"
+            placeholder="Your Name"
+            style={styles.input}
+            required
+          />
+
+          <input
+            name="phone"
+            placeholder="Phone Number"
+            style={styles.input}
+            required
+          />
+
+          <input
+            name="city"
+            placeholder="Preferred City"
+            style={styles.input}
+            required
+          />
+
+          <input
+            name="remark"
+            placeholder="Remark"
+            style={styles.input}
+            required
+          />
 
           <button type="submit" style={styles.submitBtn}>
             Submit Request
           </button>
         </form>
-
       </div>
     </div>,
     document.body
   );
 };
-
 
 const styles = {
   overlay: {
@@ -181,6 +227,7 @@ const styles = {
     padding: "10px",
     border: "none",
     borderRadius: "6px",
+    cursor: "pointer",
   },
 };
 
