@@ -112,6 +112,7 @@ City: ${data.city}`;
           <input name="name" placeholder="Your Name" style={styles.input} required />
           <input name="phone" placeholder="Phone Number" style={styles.input} required />
           <input name="city" placeholder="Preferred City" style={styles.input} required />
+          <input name="remark" placeholder="Remark" style={styles.input} required />
 
           <button type="submit" style={styles.submitBtn}>
             Submit Request
