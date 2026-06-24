@@ -102,7 +102,7 @@ const Footer = () => {
               </li>
               <li>
                 <Phone size={17} className="text-accent" />
-                <a href="tel:+442079460958">+918796449760</a>
+                <a href="tel:+918796449760">+918796449760</a>
               </li>
               <li>
                 <Mail size={17} className="text-accent" />
