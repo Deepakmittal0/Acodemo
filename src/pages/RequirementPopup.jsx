@@ -117,37 +117,13 @@ const data = {
 
 
     // ✅ WhatsApp message
-    const msg = `Hello Acadomo,
+  const url = "https://wa.me/918796449760";
 
+setTimeout(() => {
+  window.open(url, "_blank");
+}, 5000);
 
-New Lead Details
-
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-University: ${data.college}
-Preferred City: ${data.city}
-
-Assistance Required:
-${data.assistance}
-
-Other Requirement:
-${data.other}
-
-How did you hear about us:
-${data.about}
-
-Additional Information:
-${data.remark}`;
-
-    const url = `https://wa.me/918796449760?text=${encodeURIComponent(msg)}`;
-
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 9000);
-
-    e.target.reset();
-  };
+e.target.reset();
 
   if (!open) return null;
 
