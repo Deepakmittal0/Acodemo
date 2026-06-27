@@ -115,15 +115,14 @@ const data = {
     });
 
 
-
-    // ✅ WhatsApp message
-  const url = "https://wa.me/918796449760";
+const url = "https://wa.me/918796449760";
 
 setTimeout(() => {
   window.open(url, "_blank");
-}, 5000);
+}, 9000);
 
 e.target.reset();
+  };
 
   if (!open) return null;
 
